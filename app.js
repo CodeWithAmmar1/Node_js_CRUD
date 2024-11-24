@@ -61,4 +61,8 @@ app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
 
- 
+
+//commands
+// npm i express
+// npm i nodemon
+// npm start
