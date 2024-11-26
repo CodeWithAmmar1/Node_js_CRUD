@@ -2,10 +2,10 @@ const express = require('express')
 const app = express()
 const port=3000
 
-// enable the parsing of JSON request bodies.
+// enable the parsing of JSON request bodies
 app.use(express.json());
 
-// Import postData from the external file
+// Import data from the external file
 const posts = require('./data/posts');
 const comments = require('./data/comments');
 const albums = require('./data/albums');
@@ -41,8 +41,8 @@ app.get('/users', function (req, res) {
 
 app.post('/post', (req, res) => {
   const newData = req.body;
-  data.push(newData);
-  res.status(201).send({ status: true, message: "Created", data: postData });
+  posts.push(newData);
+  res.status(201).send({ status: true, message: "Created", data: posts });
 });
 
 app.put('/put', (req, res) => {
